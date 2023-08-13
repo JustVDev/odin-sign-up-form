@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Norse Bold';
+    src: url(./Norse-Bold.otf);
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+.logo{
+    font-family: 'Norse Bold', sans-serif;
+    background: url(./mountain.jpeg) no-repeat;
+    background-size: cover;
+    flex-basis: min(33vw, 600px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo > div{
+    background: hsl(0, 0%, 0%);
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+}
+.logo>div>img{
+    height: 70%;
+    position: relative;
+    left: -20%;
+}
+.logo>div>img::after{
+    content: 'ODIN';
+    display:block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    z-index: 1;
+}
+
+.logo > footer{
+    
+}
+
+main{
+    flex-basis: 800px;
+}
