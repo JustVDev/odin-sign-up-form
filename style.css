@@ -1,7 +1,16 @@
 @font-face {
     font-family: 'Norse Bold';
     src: url(./Norse-Bold.otf);
+
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body{
     height: 100vh;
     display: flex;
@@ -24,33 +33,39 @@ body{
 }
 
 .logo > div{
-    background: hsl(0, 0%, 0%);
+    background: hsl(0, 0%, 0%, 0.5);
     align-self: stretch;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 15%;
+    position: relative;
+    top: 20%;
 }
 .logo>div>img{
     height: 70%;
     position: relative;
-    left: -20%;
+    left: -10%;
 }
-.logo>div>img::after{
+img ~ span::after{
     content: 'ODIN';
-    display:block;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    font-size: 20px;
+    display: block;
     color: white;
-    z-index: 1;
+    font-size: 4rem;
+    position: relative;
+    left: -10%;
 }
 
-.logo > footer{
-    
-}
+
 
 main{
     flex-basis: 800px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10vh 10vh 10vh 5vh;
+}
+.statement:first-child h3{
+    padding: 1rem;
 }
