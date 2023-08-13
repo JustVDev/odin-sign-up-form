@@ -58,58 +58,60 @@ img ~ span::after{
     position: relative;
     left: -10%;
 }
-
-
-
-
+/* used to center info */
 main{
-    margin-top: 2rem;
-    flex: 1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.main{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-}
-.statement > *{
-max-width: 800px;    
-margin: 2rem;
+
 }
 
+.statement{
+    max-width: 1000px;
+}
+.statement > * {
+    margin-left: 3rem;
+    padding: 0 0 3rem 0;
+    font-size: 22px;
+}
 
+/* used to extend the white background to the edge, and add height to container */
 form{
     background: white;
-    padding: 2rem;    
-    height: 35vh;
-    
-
-    
+    width: calc(100vw - min(33vw, 600px));
+    flex: 0 1 400px;
 
 }
 .formContainer{
-    max-width: 800px;
+    margin-left: 1rem;
+    max-width: 1000px;
+    padding: 2rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-
+    gap: 3rem;
 }
-h2:first-child{
+.formContainer h2{
     flex-basis: 100%;
     margin-bottom: 2rem;
 }
 
+.input> *{
+    display: block;
+    width: calc(500px - 6rem);
+}
 input{
-    padding: .3rem;
-    margin-right: 2rem;
-    flex: 0 1 calc((800px - 4.6rem) / 2);
-    margin-bottom: 2rem;
+    padding-top:.5rem ;
+    padding-bottom:.5rem ;
+    font-size: 1.25rem;
 }
 
 
-
-
-
 aside{
-    margin: 2rem auto 20% 2rem;
+    margin: 1rem auto 20% 2rem;
 }
 aside > * {
     margin: 1rem;
@@ -118,9 +120,13 @@ aside > * {
     padding: .8rem 3rem;
     background: var(--btnColor);
     color: white;
+    border-radius: .7rem;
+    border: none;
+    font-size: 2rem;
 }
 p > a {
     color: var(--btnColor);
     text-decoration: none;
     font-weight: bold;
 }
+
