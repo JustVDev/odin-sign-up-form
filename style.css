@@ -3,7 +3,9 @@
     src: url(./Norse-Bold.otf);
 
 }
-
+:root{
+    --btnColor: #596D48;
+}
 *{
     margin: 0;
     padding: 0;
@@ -14,7 +16,8 @@
 body{
     height: 100vh;
     display: flex;
-    justify-content: flex-start;
+    background: lightgrey;
+
 }
 
 
@@ -58,14 +61,66 @@ img ~ span::after{
 
 
 
-main{
-    flex-basis: 800px;
 
+main{
+    margin-top: 2rem;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 10vh 10vh 10vh 5vh;
+    justify-content: center;
+    height: 100vh;
 }
-.statement:first-child h3{
-    padding: 1rem;
+.statement > *{
+max-width: 800px;    
+margin: 2rem;
+}
+
+
+form{
+    background: white;
+    padding: 2rem;    
+    height: 35vh;
+    
+
+    
+
+}
+.formContainer{
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+h2:first-child{
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+}
+
+input{
+    padding: .3rem;
+    margin-right: 2rem;
+    flex: 0 1 calc((800px - 4.6rem) / 2);
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+aside{
+    margin: 2rem auto 20% 2rem;
+}
+aside > * {
+    margin: 1rem;
+}
+#createAccount{
+    padding: .8rem 3rem;
+    background: var(--btnColor);
+    color: white;
+}
+p > a {
+    color: var(--btnColor);
+    text-decoration: none;
+    font-weight: bold;
 }
